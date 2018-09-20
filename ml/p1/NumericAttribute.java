@@ -11,16 +11,17 @@ public class NumericAttribute extends Attribute
 	public NumericAttribute(java.lang.String name)
 	{
 		super();
-		name = name;
+		this.name = name;
 	}
 
 	public java.lang.String toString()
 	{
-		return "@numericAttribute ";
+		return "@numericAttribute " + this.name;
 	}
 	public boolean validValue(java.lang.Double value)
 	{
-
+		return true;
+		// FIX
 	}
 	public static void main(java.lang.String[] args)
 	{

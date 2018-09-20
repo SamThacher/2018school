@@ -10,14 +10,14 @@ public class Attribute
 		name = "default";
 	}
 
-	public Attribute(java.lang.String n)
+	public Attribute(java.lang.String name)
 	{
-		name = n;
+		this.name = name;
 	}
 
-    public void setName(java.lang.String n)
+    public void setName(java.lang.String name)
     {
-    	name = n;
+    	this.name = name;
     }
 
     public java.lang.String getName()
@@ -32,7 +32,7 @@ public class Attribute
 
     public int size()
     {
-
+    	return 0;
     }
 
     public static void main(java.lang.String[] args)
