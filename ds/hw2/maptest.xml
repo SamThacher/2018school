@@ -1,0 +1,8 @@
+<aiml encoding="UTF-8" version="1.0.1">
+	<!-- basic_chat.aiml -->
+	<category>
+		<pattern>My favorite food is <set>food</set></pattern>
+		<template>
+			<map name="recipes"><star /></map>are the ingredients of <star /></template>
+	</category>
+</aiml>

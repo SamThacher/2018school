@@ -16,7 +16,7 @@ public class NumericAttribute extends Attribute
 
 	public java.lang.String toString()
 	{
-		return "@numericAttribute " + this.name;
+		return "@attribute " + this.name + " numeric";
 	}
 	public boolean validValue(java.lang.Double value)
 	{

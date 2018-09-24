@@ -16,7 +16,6 @@ public class AttributeFactory
 		{
 			NumericAttribute num = new NumericAttribute(temp);
 			scanner.nextLine();
-			System.out.println(num.toString());
 			return num;
 		}
 		else
@@ -31,7 +30,6 @@ public class AttributeFactory
 					flag = true;
 				}
 			}
-			System.out.println(nom.toString());
 			return nom;
 		}
 	}

@@ -14,36 +14,55 @@ public class Examples extends java.util.ArrayList<Example>
 	{
 		while(!scanner.hasNext("@examples"))
 		{
-			System.out.println(scanner.nextLine());
+			scanner.nextLine();
 		}
+		scanner.next();
 		while(scanner.hasNext())
 		{
 			Example e = new Example();
-			int i = 0;
-			System.out.println(i);
-			while(i < attributes.size())
+			for(int i = 0; i < attributes.size(); i++)
 			{	
+				java.lang.String token = scanner.next();
 				if(attributes.get(i) instanceof NumericAttribute)
 				{
-					e.add(Double.parseDouble(scanner.next()));
+					e.add(Double.parseDouble(token));
 				}
 				else
 				{
-					e.add((double)((NominalAttribute)attributes.get(i)).getIndex(scanner.next()));
+					e.add((double)((NominalAttribute)attributes.get(i)).getIndex(token));
 				}
-				System.out.print(i++);
-			}	
-			for(int j = 0; j < e.size(); j++)
+			}
+			this.add(e);
+			try
 			{
-				System.out.print(e.get(j) + " ");
-			}	
-			scanner.nextLine();
+				scanner.nextLine();
+			}
+			catch(java.util.NoSuchElementException ex)
+			{
+			}
 		}
 	}
 
 	public java.lang.String toString()
 	{
-		return "@examples";
+		java.lang.String s = "";
+		s += "@examples\n";
+		for(int j = 0; j < this.size(); j++)
+		{
+			for(int i = 0; i < attributes.size(); i++)
+			{
+				if(attributes.get(i) instanceof NumericAttribute)
+				{
+					s += Double.toString(this.get(j).get(i)) + " ";
+				}
+				else
+				{
+					s += ((NominalAttribute)attributes.get(i)).getValue(this.get(j).get(i).intValue()) + " ";
+				}
+			}
+			s += "\n";
+		}
+		return s;
 	}
 	
 }

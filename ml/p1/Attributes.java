@@ -23,8 +23,14 @@ public class Attributes
 	
 	public boolean getHasNumericAttributes()
 	{
+		for(int i = 0; i < attributes.size(); i++)
+		{
+			if(attributes.get(i) instanceof NumericAttribute)
+			{
+				return true;
+			}
+		}
 		return false;
-		//FIX
 	}
 
 	public Attribute get(int i)
@@ -34,9 +40,7 @@ public class Attributes
 
 	public Attribute getClassAttribute()
 	{
-		return attributes.get(0);
-
-		//FIX
+		return attributes.get(attributes.size()-1);
 	}
 
 	public int getIndex(java.lang.String name) throws java.lang.Exception
@@ -61,7 +65,7 @@ public class Attributes
 		AttributeFactory factory = new AttributeFactory();
 		while(!scanner.hasNext("@attribute"))
 		{
-			System.out.println(scanner.nextLine());
+			scanner.nextLine();
 		}
 		while(true)
 		{
@@ -83,7 +87,12 @@ public class Attributes
 
 	public java.lang.String toString()
 	{
-		return "@attributes";
+		java.lang.String s = "";
+		for(int i = 0; i < attributes.size(); i++)
+		{
+			s += attributes.get(i).toString() + "\n";
+		}
+		return s;
 	}
 
 	public static void main(java.lang.String[] args)

@@ -27,13 +27,12 @@ public class NominalAttribute extends Attribute
 	{
 		for(int i = 0; i < this.domain.size(); i++)
 		{
-			if(this.domain.get(i) == value)
+			if(this.domain.get(i).contains(value))
 			{
 				return i;
 			}
 		}
-		return 0;
-		// throw new java.lang.Exception("value not found.");
+		throw new java.lang.Exception("value not found.");
 	}
 
 	public java.lang.String getValue(int index)
@@ -48,14 +47,12 @@ public class NominalAttribute extends Attribute
 
 	public java.lang.String toString()
 	{
-		java.lang.String tester = "@nominalAttribute ";
-		tester += "ARRAY: ";
+		java.lang.String tester = "@attribute ";
+		tester += this.name;
 		for(int i = 0; i < this.domain.size(); i++)
 		{
-			tester += this.domain.get(i) + " ";
+			tester += " " + this.domain.get(i);
 		}
-		tester += "NAME: ";
-		tester += this.name;
 		return tester;
 	}
 
