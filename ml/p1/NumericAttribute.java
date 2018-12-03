@@ -10,22 +10,19 @@ public class NumericAttribute extends Attribute
 
 	public NumericAttribute(java.lang.String name)
 	{
-		super();
-		this.name = name;
+		super(name);
 	}
 
 	public java.lang.String toString()
 	{
-		return "@attribute " + this.name + " numeric";
+		StringBuilder s = new StringBuilder();
+		s.append(super.toString());
+		s.append(" numeric");
+		return s.toString();
 	}
 	public boolean validValue(java.lang.Double value)
 	{
 		return true;
-		// FIX
-	}
-	public static void main(java.lang.String[] args)
-	{
-
 	}
 	
 }

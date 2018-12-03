@@ -1,8 +1,11 @@
 <aiml encoding="UTF-8" version="1.0.1">
 	<!-- basic_chat.aiml -->
 	<category>
-		<pattern>My favorite food is <set>food</set></pattern>
-		<template>
-			<map name="recipes"><star /></map>are the ingredients of <star /></template>
+		<template>Hello. I am a chatbot that is able to discuss Sam Thacher's favorite food.
+		</template>
 	</category>
+	<category>
+		<pattern>*<pattern>
+		<template> Sam's first favorite food is steak. For steak, the ingredients are fairly simple. Usually sam eats tri-tip or NY steak. He mainly just puts salt and pepper on steak and grills it.
+		</template>
 </aiml>

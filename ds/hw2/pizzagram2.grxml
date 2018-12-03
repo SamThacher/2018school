@@ -1,0 +1,149 @@
+<?xml version= "1.0" encoding="UTF-8" ?>
+
+<grammar xml:lang="en-US">
+
+
+<rule id="ORDER" scope="public">
+
+  <!-- grammar for the mixed init service -->
+
+
+  <one-of>
+
+   <item>
+
+    <item><ruleref uri="#SIZE" /><tag>out.size=rules.SIZE.size;</tag></item>
+
+    <item><ruleref uri="#TOPPING" /><tag>out.topping=rules.TOPPING.topping</tag></item>
+
+    <item><ruleref uri="#DRINK" /><tag>out.drink=rules.DRINK.drink</tag></item>
+
+
+   </item>
+    <item>
+
+    <item><ruleref uri="#SIZE" /><tag>out.size=rules.SIZE.size;</tag></item>
+
+    <item><ruleref uri="#TOPPING" /><tag>out.topping=rules.TOPPING.topping</tag></item>
+
+
+   </item>
+    <item>
+
+    <item><ruleref uri="#SIZE" /><tag>out.size=rules.SIZE.size;</tag></item>
+
+    <item><ruleref uri="#DRINK" /><tag>out.drink=rules.DRINK.drink</tag></item>
+
+
+   </item>
+    <item>
+
+    <item><ruleref uri="#TOPPING" /><tag>out.topping=rules.TOPPING.topping</tag></item>
+
+    <item><ruleref uri="#DRINK" /><tag>out.drink=rules.DRINK.drink</tag></item>
+
+
+   </item>
+
+   <item>
+    <!-- matched celeb only -->
+
+    <ruleref uri="#SIZE" />
+
+   </item>
+
+   <item>
+
+ 
+
+    <!-- matched location only -->
+
+    <ruleref uri="#TOPPING" />
+
+   </item>
+   <item>
+
+
+    <ruleref uri="#DRINK" />
+
+  </item>
+
+  </one-of>
+
+</rule>
+
+<rule id="SIZE" scope="public">
+
+  <one-of>
+
+   <item>
+
+ 
+
+    <one-of>
+
+     <item> small <tag> out.size = "small"; </tag></item>
+
+     <item> medium <tag> out.size = "medium";  </tag></item>
+
+     <item> large <tag> out.size = "large"; </tag></item>
+
+    </one-of>
+
+   </item>
+
+  </one-of>
+
+</rule>
+
+
+<rule id="TOPPING" scope="public">
+
+  <one-of>
+
+   <item>
+
+
+    <one-of>
+
+     <item> spinach <tag> out.topping = "spinach";   </tag></item>
+
+     <item> bell peppers <tag> out.topping = "bell peppers";   </tag></item>
+
+     <item> pepperoni <tag> out.topping = "pepperoni";   </tag></item>
+
+     <item> sausage <tag> out.topping = "sausage";   </tag></item>
+
+    </one-of>
+
+   </item>
+
+  </one-of>
+
+</rule>
+
+<rule id="DRINK" scope="public">
+
+  <one-of>
+
+   <item>
+
+ 
+
+    <one-of>
+
+     <item> 7 up <tag> out.drink = "7 up";   </tag></item>
+
+     <item> coke <tag> out.drink = "coke";   </tag></item>
+
+     <item> pepsi <tag> out.drink = "pepsi";   </tag></item>
+
+    </one-of>
+
+   </item>
+
+  </one-of>
+
+</rule>
+
+</grammar>

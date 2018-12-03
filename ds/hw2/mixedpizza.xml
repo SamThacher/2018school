@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<vxml version = "2.1" >
+
+<form>
+
+  <!--  This is the mixed-initiative pizza ordering system -->
+  <grammar src="http://webhosting.voxeo.net/205012/www/pizzagram.grxml#ORDER" type="application/grammar-xml"/>
+ 
+  <initial name="start">
+    <prompt> Hello! I am a Pizza ordering service implemented by Sam Thacher. Please tell me what size of pizza, which topping you would like from spinach, pepperoni, bell peppers, or sausage, and what drink you would like between 7up, coke and pepsi.
+    </prompt>
+   <nomatch>
+     i'm sorry, i still didn't understand that.
+     let's take this step by step
+    <assign name="start" expr="true"/>
+    <reprompt/>
+   </nomatch>
+  </initial>
+
+  <field name = "size">
+   <prompt>
+
+   What size pizza would you like? Please say either small, medium, or large.
+   </prompt>
+
+  <filled>
+    <prompt> You chose <value expr="size"/> as your size. </prompt>
+  </filled>
+
+  </field>
+
+	<field name = "topping">
+   <prompt>
+
+   Your topping choices are sausage, pepperoni, bell peppers or spinach.
+   </prompt>
+    <option dtmf="1" value="sausage"> sausage </option>
+  	<option dtmf="2" value="pepperoni"> pepperoni </option>
+  	<option dtmf="3" value="bell peppers"> bell peppers </option>
+  	<option dtmf="4" value="spinach"> spinach </option>
+
+
+  <filled>
+    <prompt> You chose <value expr="topping"/> as your topping. </prompt>
+  </filled>
+
+  </field>
+
+  <field name = "drink">
+   <prompt>
+
+   Your accompanying drink choices are coke, pepsi, or 7 up.
+   </prompt>
+    <option dtmf="1" value="coke"> sausage </option>
+  	<option dtmf="2" value="pepsi"> pepsi </option>
+  	<option dtmf="3" value="7 up"> 7 up </option>
+
+
+  <filled>
+    <prompt> You chose <value expr="drink"/> as your drink. </prompt>
+  </filled>
+
+  </field>
+  <field name = "confirm">
+  <prompt> You are getting a <value expr="size"/> pizza with <value expr="topping"/> as your topping. Your drink is <value expr="drink"/>. Is this correct? </prompt>
+
+  <option dtmf="1" value="yes"> yes </option>
+  <option dtmf="2" value="no"> no </option>
+	<filled>
+		<if cond="confirm=='no'">
+			<prompt> Ok. Please call back the system to restart. </prompt>
+      
+		<elseif cond="confirm=='yes'"/>
+			<prompt> Great. your order will be delivered shortly </prompt>
+		</if>
+	</filled>
+</field>
+ </form>
+
+</vxml>

@@ -13,8 +13,7 @@ public class NominalAttribute extends Attribute
 
 	public NominalAttribute(java.lang.String name)
 	{
-		super();
-		this.name = name;
+		super(name);
 		this.domain = new java.util.ArrayList<java.lang.String>();
 	}
 
@@ -47,30 +46,23 @@ public class NominalAttribute extends Attribute
 
 	public java.lang.String toString()
 	{
-		java.lang.String tester = "@attribute ";
-		tester += this.name;
+		StringBuilder tester = new StringBuilder();
+		tester.append(super.toString());
 		for(int i = 0; i < this.domain.size(); i++)
 		{
-			tester += " " + this.domain.get(i);
+			tester.append(" " + this.domain.get(i));
 		}
-		return tester;
+		return tester.toString();
 	}
 
 	public boolean validValue(java.lang.String value)
 	{
-		for(int i = 0; i < this.domain.size(); i++)
-		{
-			if(this.domain.get(i) == value)
-			{
-				return true;
-			}
-		}
-		return false;
+		return true;
 	}
 
 	public static void main(java.lang.String[] args)
 	{
-
+		
 	}
 	
 }

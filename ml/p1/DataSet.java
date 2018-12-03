@@ -54,10 +54,13 @@ public class DataSet {
 	}
 	public void setRandom( java.util.Random random )
 	{
-
+		this.random = random;
 	}
 	public java.lang.String toString()
 	{
-		return attributes.toString() + examples.toString();
+		StringBuilder sb = new StringBuilder();
+		sb.append(attributes.toString());
+		sb.append(examples.toString());
+		return sb.toString();
 	}
 }

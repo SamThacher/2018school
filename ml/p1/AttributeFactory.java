@@ -25,7 +25,7 @@ public class AttributeFactory
 			while(!flag)
 			{
 				nom.addValue(scanner.next());
-				if(scanner.hasNext("@attribute") || scanner.hasNext("@examples"))
+				if(scanner.hasNext("@attribute") || scanner.hasNext("@examples") || !scanner.hasNext())
 				{
 					flag = true;
 				}

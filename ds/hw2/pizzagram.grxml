@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar mode="dtmf" version="1.0">
+
+<rule id="size">
+   <one-of>
+         <item>large<tag>size="large";</tag></item>
+         <item>medium<tag>size="medium";</tag></item>
+         <item>small<tag>size="small";</tag></item>
+  </one-of>
+       
+</rule>
+<rule id="topping">
+  <one-of>
+        <item>spinach<tag>topping="spinach";</tag></item>
+        <item>sausage<tag>topping="sausage";</tag></item>
+        <item>pepperoni<tag>topping="pepperoni";</tag></item>
+        <item>bell peppers<tag>topping="bell peppers";</tag></item>
+      </one-of>
+    </rule>
+<rule id="drink">
+  <one-of>
+        <item>7 up<tag>drink="7up";</tag></item>
+        <item>coke<tag>size="coke";</tag></item>
+        <item>pepsi<tag>size="pepsi";</tag></item>
+  </one-of>
+</rule>
+
+</grammar>

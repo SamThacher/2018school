@@ -34,10 +34,5 @@ public class Attribute
     {
     	return 0;
     }
-
-    public static void main(java.lang.String[] args)
-	{
-
-    }
 	
 }

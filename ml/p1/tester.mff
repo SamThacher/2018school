@@ -1,0 +1,23 @@
+@dataset pima
+
+@attribute a1 numeric
+@attribute a2 numeric
+@attribute a3 numeric
+@attribute a4 numeric
+@attribute a5 numeric
+@attribute a6 numeric
+@attribute a7 numeric
+@attribute a8 numeric
+@attribute class - +
+
+@examples
+
+6 148 72 35 0 33.6 0.627 50 +
+8 183 64 0 0 23.3 0.672 32 +
+0 137 40 35 168 43.1 2.288 33 +
+3 78 50 32 88 31.0 0.248 26 +
+2 197 70 45 543 30.5 0.158 53 +
+8 125 96 0 0 0.0 0.232 54 +
+10 168 74 0 0 38.0 0.537 34 +
+1 189 60 23 846 30.1 0.398 59 +
+5 166 72 19 175 25.8 0.587 51 +

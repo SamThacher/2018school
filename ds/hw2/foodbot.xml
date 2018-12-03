@@ -1,0 +1,423 @@
+<aiml encoding="UTF-8" version="1.0.1">
+	<!-- basic_chat.aiml -->
+	<category>
+		<pattern> LOAD AIML B </pattern>
+		<template>
+			<think>
+			<set name="state">NULL</set>
+		</think>
+		Hello. I am a chatbot that is able to discuss Sam Thacher's favorite foods. Would you like to discuss steak, chocolate cake, chicken nuggets, ice cream, or pasta.
+		</template>
+	</category>
+
+
+
+
+	
+	<!-- basic hello repeat commands -->
+	<category>
+		<pattern> HI </pattern>
+		<template>
+		Hello. I am a chatbot that is able to discuss Sam Thacher's favorite foods. Would you like to discuss steak, chocolate cake, chicken nuggets, ice cream, or pasta.
+		</template>
+	</category>
+	<category>
+		<pattern> HELLO </pattern>
+		<template>
+		Hello. I am a chatbot that is able to discuss Sam Thacher's favorite foods. Would you like to discuss steak, chocolate cake, chicken nuggets, ice cream, or pasta.
+		</template>
+	</category>
+	<category>
+		<pattern> HEY </pattern>
+		<template>
+		Hello. I am a chatbot that is able to discuss Sam Thacher's favorite foods. Would you like to discuss steak, chocolate cake, chicken nuggets, ice cream, or pasta.
+		</template>
+	</category>
+
+
+
+
+
+	<!-- basic inputs for foods -->
+	<category>
+		<pattern> _ STEAK </pattern>
+		<template>
+		<think>
+      		<set name = "state">steak</set>
+   		</think>
+   		 Sam's first favorite food is steak. For steak, the ingredients are fairly simple. Usually sam eats tri-tip or NY steak. He mainly just puts salt and pepper on the beef and grills it. You can either ask about another food (the list is steak, chocolate cake, chicken nuggets, ice cream, or pasta) or ask about one of the listed ingredients. Or I can tell you about why I like steak.
+		</template>
+	</category>
+	<category>
+		<pattern> STEAK </pattern>
+		<template>
+		<think>
+      		<set name = "state">steak</set>
+   		</think>
+   		 Sam's first favorite food is steak. For steak, the ingredients are fairly simple. Usually sam eats tri-tip or NY steak. He mainly just puts salt and pepper on the beef and grills it. You can either ask about another food (the list is steak, chocolate cake, chicken nuggets, ice cream, or pasta) or ask about one of the listed ingredients. Or I can tell you about why I like steak.
+		</template>
+	</category>
+	<category>
+		<pattern> _ CHOCOLATE CAKE </pattern>
+		<template>
+		<think>
+      		<set name = "state">cake</set>
+   		</think>
+   		 Another one of Sam's favorite foods is chocolate cake. Chocolate cake usually contains cocoa, salt, sugar, flour, eggs, baking soda, and other ingredients based on the recipe. Sam's favorite chocolate cake has a cup of coffee in it. You can either ask about another food (the list is steak, chocolate cake, chicken nuggets, ice cream, or pasta) or ask about one of the listed ingredients. Or I can tell you about why I like Chocolate cake.
+		</template>
+	</category>
+	<category>
+		<pattern> _ CAKE </pattern>
+		<template>
+		<think>
+      		<set name = "state">cake</set>
+   		</think>
+   		 Another one of Sam's favorite foods is chocolate cake. Chocolate cake usually contains cocoa, salt, sugar, flour, eggs, baking soda, and other ingredients based on the recipe. Sam's favorite chocolate cake has a cup of coffee in it. You can either ask about another food (the list is steak, chocolate cake, chicken nuggets, ice cream, or pasta) or ask about one of the listed ingredients. Or I can tell you about why I like chocolate cake.
+		</template>
+	</category>
+	<category>
+		<pattern> CHOCOLATE CAKE </pattern>
+		<template>
+		<think>
+      		<set name = "state">cake</set>
+   		</think>
+   		 Another one of Sam's favorite foods is chocolate cake. Chocolate cake usually contains cocoa, salt, sugar, flour, eggs, baking soda, and other ingredients based on the recipe. Sam's favorite chocolate cake has a cup of coffee in it. You can either ask about another food (the list is steak, chocolate cake, chicken nuggets, ice cream, or pasta) or ask about one of the listed ingredients. Or I can tell you about why I like chocolate cake.
+		</template>
+	</category>
+	<category>
+		<pattern> CAKE </pattern>
+		<template>
+		<think>
+      		<set name = "state">cake</set>
+   		</think>
+   		 Another one of Sam's favorite foods is chocolate cake. Chocolate cake usually contains cocoa, salt, sugar, flour, eggs, baking soda, and other ingredients based on the recipe. Sam's favorite chocolate cake has a cup of coffee in it. You can either ask about another food (the list is steak, chocolate cake, chicken nuggets, ice cream, or pasta) or ask about one of the listed ingredients. Or I can tell you about why I like chocolate cake.
+		</template>
+	</category>
+	<category>
+		<pattern> _ CHICKEN NUGGETS </pattern>
+		<template>
+		<think>
+      		<set name = "state">nuggets</set>
+   		</think>
+   		 Another one of Sam's favorite foods is chicken nuggets. Chicken nuggets are composed of chicken breast that has been battered in flour and salt and some binding ingredients (often eggs). The chicken is then fried to give it good texture and flavor. You can either ask about another food (the list is steak, chocolate cake, chicken nuggets, ice cream, or pasta) or ask about one of the listed ingredients. Or I can tell you about why I like chicken nuggets.
+		</template>
+	</category>
+	<category>
+		<pattern> CHICKEN NUGGETS </pattern>
+		<template>
+		<think>
+      		<set name = "state">nuggets</set>
+   		</think>
+   		 Another one of Sam's favorite foods is chicken nuggets. Chicken nuggets are composed of chicken breast that has been battered in flour and salt and some binding ingredients (often eggs). The chicken is then fried to give it good texture and flavor. You can either ask about another food (the list is steak, chocolate cake, chicken nuggets, ice cream, or pasta) or ask about one of the listed ingredients. Or I can tell you about why I like chicken nuggets.
+		</template>
+	</category>
+	<category>
+		<pattern> _ ICE CREAM </pattern>
+		<template>
+		<think>
+      		<set name = "state">cream</set>
+   		</think>
+   		 Another one of Sam's favorite foods is ice cream. Ice cream is a frozen mixture of milk and sugar and whatever flavor you want. You can either ask about another food (the list is steak, chocolate cake, chicken nuggets, ice cream, or pasta) or ask about one of the listed ingredients. Or I can tell you about why I like ice cream.
+		</template>
+	</category>
+	<category>
+		<pattern> ICE CREAM </pattern>
+		<template>
+		<think>
+      		<set name = "state">cream</set>
+   		</think>
+   		 Another one of Sam's favorite foods is ice cream. Ice cream is a frozen mixture of milk and sugar and whatever flavor you want. You can either ask about another food (the list is steak, chocolate cake, chicken nuggets, ice cream, or pasta) or ask about one of the listed ingredients. Or I can tell you about why I like ice cream.
+		</template>
+	</category>
+	<category>
+		<pattern> _ PASTA </pattern>
+		<template>
+		<think>
+      		<set name = "state">pasta</set>
+   		</think>
+   		 Pasta is a grain product made with eggs or water and unleavened flour. It has been eaten for centuries - it originally was made in italy. You can either ask about another food (the list is steak, chocolate cake, chicken nuggets, ice cream, or pasta) or ask about one of the listed ingredients. Or I can tell you about why I like pasta.
+		</template>
+	</category>
+	<category>
+		<pattern> PASTA </pattern>
+		<template>
+		<think>
+      		<set name = "state">pasta</set>
+   		</think>
+   		 Pasta is a grain product made with eggs or water and unleavened flour. It has been eaten for centuries - it originally was made in italy. You can either ask about another food (the list is steak, chocolate cake, chicken nuggets, ice cream, or pasta) or ask about one of the listed ingredients. Or I can tell you about why I like pasta.
+		</template>
+	</category>
+
+
+
+
+
+	<!-- basic recipe starts -->
+	<category>
+		<pattern> _ RECIPE </pattern>
+		<template>
+		<condition name = "state">
+			<li value = "steak"> For steak, you just have to season it and grill it. Seasoning begins with getting the steak to room temperature and putting your desired spices on it. If you would like to hear the rest of the recipe, let me know. Or you can ask about the ingredients. </li>
+			<li value = "cake"> For cake, you must first mix all of the ingredients together well before baking. If you do not mix the ingredients, the cake will not rise correctly. If you would like to hear the rest of the recipe, let me know. Or you can ask about the ingredients. </li>
+			<li value = "nuggets"> For chicken nuggets, you first mix together the batter of eggs and flour and then roll the chicken in it. If you would like to hear the rest of the recipe, let me know. Or you can ask about the ingredients. </li>
+			<li value = "cream"> For ice cream, you first mix the flavoring of your choice with milk and sugar. If you would like to hear the rest of the recipe, let me know. Or you can ask about the ingredients. </li>
+			<li value = "pasta"> For pasta, the flour, salt, and eggs have to be kneaded together and mixed well. Roll on a lightly floured service and cut into strips to be cooked. If you would like to hear the rest of the recipe, let me know. Or you can ask about the ingredients.</li>
+			<li value = "NULL"> Please pick a recipe to hear about. We can talk about steak, chocolate cake, chicken nuggets, ice cream, or pasta. </li>
+		</condition>
+	</template>
+	</category>
+	<category>
+		<pattern> RECIPE </pattern>
+		<template>
+		<condition name = "state">
+			<li value = "steak"> For steak, you just have to season it and grill it. Seasoning begins with getting the steak to room temperature and putting your desired spices on it. If you would like to hear the rest of the recipe, let me know. Or you can ask about the ingredients. </li>
+			<li value = "cake"> For cake, you must first mix all of the ingredients together well before baking. If you do not mix the ingredients, the cake will not rise correctly. If you would like to hear the rest of the recipe, let me know. Or you can ask about the ingredients. </li>
+			<li value = "nuggets"> For chicken nuggets, you first mix together the batter of eggs and flour and then roll the chicken in it. If you would like to hear the rest of the recipe, let me know. Or you can ask about the ingredients. </li>
+			<li value = "cream"> For ice cream, you first mix the flavoring of your choice with milk and sugar. If you would like to hear the rest of the recipe, let me know. Or you can ask about the ingredients. </li>
+			<li value = "pasta"> For pasta, the flour, salt, and eggs have to be kneaded together and mixed well. Roll on a lightly floured service and cut into strips to be cooked. If you would like to hear the rest of the recipe, let me know. Or you can ask about the ingredients.</li>
+			<li value = "NULL"> Please pick a recipe to hear about. We can talk about steak, chocolate cake, chicken nuggets, ice cream, or pasta. </li>
+		</condition>
+	</template>
+	</category>
+
+
+
+
+
+
+	<!-- patterns to see the rest of the recipe -->
+	<category>
+			<pattern> _ REST _ </pattern>
+		<template>
+			<condition name = "state">
+			<li value = "steak"> For steak, you would then grill it. Different cuts of steak are cooked at different temperatures - you can either cut into your steak part of the way through cooking or use a meat thermometer to monitor the doneness to make sure you are safely eating. Please pick one of the other foods (steak, cake, chicken nuggets, ice cream, or pasta) or ask about one of the ingredients. </li>
+			<li value = "cake"> For cake, you then pour your mix into an appropriate tin that will hold the cake's shape while it cooks and hardens. The temperature and time to cook will depend on the type and size of the cake as well as its shape - it cook cook faster if it is thinner. Please pick one of the other foods (steak, cake, chicken nuggets, ice cream, or pasta) or ask about one of the ingredients. </li>
+			<li value = "nuggets"> For chicken nuggets, you will then get some oil to a boiling temperature and put the nuggets in the oil. They will cook until the inside of the chicken is totally safe. Please pick one of the other foods (steak, cake, chicken nuggets, ice cream, or pasta) or ask about one of the ingredients. </li>
+			<li value = "cream"> The next step for ice cream requires the use of a ice cream machine or similar in order to churn the ice cream and get the mixture that the final product consists of. Please pick one of the other foods (steak, cake, chicken nuggets, ice cream, or pasta) or ask about one of the ingredients. </li>
+			<li value = "pasta"> For pasta, after mixing the ingredients together, you can either choose to boil the pasta immediately to make it, or you can leave out the pasta dough that you have created - it will harden to be used later. Please pick one of the other foods (steak, cake, chicken nuggets, ice cream, or pasta) or ask about one of the ingredients. </li>
+			<li value = "NULL"> Please pick a recipe to hear about. We can talk about steak, chocolate cake, chicken nuggets, ice cream, or pasta. </li>
+		</condition>
+		<think>
+			<set name="state">NULL</set>
+		</think>
+		</template>
+	</category>
+	<category>
+			<pattern> _ REST </pattern>
+		<template>
+			<condition name = "state">
+			<li value = "steak"> For steak, you would then grill it. Different cuts of steak are cooked at different temperatures - you can either cut into your steak part of the way through cooking or use a meat thermometer to monitor the doneness to make sure you are safely eating. Please pick one of the other foods (steak, cake, chicken nuggets, ice cream, or pasta) or ask about one of the ingredients. </li>
+			<li value = "cake"> For cake, you then pour your mix into an appropriate tin that will hold the cake's shape while it cooks and hardens. The temperature and time to cook will depend on the type and size of the cake as well as its shape - it cook cook faster if it is thinner. Please pick one of the other foods (steak, cake, chicken nuggets, ice cream, or pasta) or ask about one of the ingredients. </li>
+			<li value = "nuggets"> For chicken nuggets, you will then get some oil to a boiling temperature and put the nuggets in the oil. They will cook until the inside of the chicken is totally safe. Please pick one of the other foods (steak, cake, chicken nuggets, ice cream, or pasta) or ask about one of the ingredients. </li>
+			<li value = "cream"> The next step for ice cream requires the use of a ice cream machine or similar in order to churn the ice cream and get the mixture that the final product consists of. Please pick one of the other foods (steak, cake, chicken nuggets, ice cream, or pasta) or ask about one of the ingredients. </li>
+			<li value = "pasta"> For pasta, after mixing the ingredients together, you can either choose to boil the pasta immediately to make it, or you can leave out the pasta dough that you have created - it will harden to be used later. Please pick one of the other foods (steak, cake, chicken nuggets, ice cream, or pasta) or ask about one of the ingredients. </li>
+			<li value = "NULL"> Please pick a recipe to hear about. We can talk about steak, chocolate cake, chicken nuggets, ice cream, or pasta. </li>
+		</condition>
+		<think>
+			<set name="state">NULL</set>
+		</think>
+		</template>
+	</category>
+	<category>
+			<pattern> REST _ </pattern>
+		<template>
+			<condition name = "state">
+			<li value = "steak"> For steak, you would then grill it. Different cuts of steak are cooked at different temperatures - you can either cut into your steak part of the way through cooking or use a meat thermometer to monitor the doneness to make sure you are safely eating. Please pick one of the other foods (steak, cake, chicken nuggets, ice cream, or pasta) or ask about one of the ingredients. </li>
+			<li value = "cake"> For cake, you then pour your mix into an appropriate tin that will hold the cake's shape while it cooks and hardens. The temperature and time to cook will depend on the type and size of the cake as well as its shape - it cook cook faster if it is thinner. Please pick one of the other foods (steak, cake, chicken nuggets, ice cream, or pasta) or ask about one of the ingredients. </li>
+			<li value = "nuggets"> For chicken nuggets, you will then get some oil to a boiling temperature and put the nuggets in the oil. They will cook until the inside of the chicken is totally safe. Please pick one of the other foods (steak, cake, chicken nuggets, ice cream, or pasta) or ask about one of the ingredients. </li>
+			<li value = "cream"> The next step for ice cream requires the use of a ice cream machine or similar in order to churn the ice cream and get the mixture that the final product consists of. Please pick one of the other foods (steak, cake, chicken nuggets, ice cream, or pasta) or ask about one of the ingredients. </li>
+			<li value = "pasta"> For pasta, after mixing the ingredients together, you can either choose to boil the pasta immediately to make it, or you can leave out the pasta dough that you have created - it will harden to be used later. Please pick one of the other foods (steak, cake, chicken nuggets, ice cream, or pasta) or ask about one of the ingredients. </li>
+			<li value = "NULL"> Please pick a recipe to hear about. We can talk about steak, chocolate cake, chicken nuggets, ice cream, or pasta. </li>
+		</condition>
+		<think>
+			<set name="state">NULL</set>
+		</think>
+		</template>
+	</category>
+
+
+
+
+	<!-- patterns to hear why i like a certain food -->
+	<category>
+			<pattern> WHY </pattern>
+		<template>
+			<condition name = "state">
+			<li value = "steak"> For steak, I like it because it is a great combination of meaty and salty. It is also great because every piece is different and it tastes different every time. </li>
+			<li value = "cake"> Cake is great for special occasions because you can share it with family. Chocolate cake is also very rich and flavorful. </li>
+			<li value = "nuggets"> Chicken nuggets are filling and are great finger food. </li>
+			<li value = "cream"> Ice cream is great because it is both cold and sweet. </li>
+			<li value = "pasta"> Pasta is great because it can take many different form and it can be topped with almost anything. </li>
+		</condition>
+		<think>
+			<set name="state">NULL</set>
+		</think>
+		</template>
+	</category>
+	<category>
+			<pattern> WHY _ </pattern>
+		<template>
+			<condition name = "state">
+			<li value = "steak"> For steak, I like it because it is a great combination of meaty and salty. It is also great because every piece is different and it tastes different every time. </li>
+			<li value = "cake"> Cake is great for special occasions because you can share it with family. Chocolate cake is also very rich and flavorful. </li>
+			<li value = "nuggets"> Chicken nuggets are filling and are great finger food. </li>
+			<li value = "cream"> Ice cream is great because it is both cold and sweet. </li>
+			<li value = "pasta"> Pasta is great because it can take many different form and it can be topped with almost anything. </li>
+		</condition>
+		<think>
+			<set name="state">NULL</set>
+		</think>
+		</template>
+	</category>
+	<category>
+			<pattern> _ WHY _ </pattern>
+		<template>
+			<condition name = "state">
+			<li value = "steak"> For steak, I like it because it is a great combination of meaty and salty. It is also great because every piece is different and it tastes different every time. </li>
+			<li value = "cake"> Cake is great for special occasions because you can share it with family. Chocolate cake is also very rich and flavorful. </li>
+			<li value = "nuggets"> Chicken nuggets are filling and are great finger food. </li>
+			<li value = "cream"> Ice cream is great because it is both cold and sweet. </li>
+			<li value = "pasta"> Pasta is great because it can take many different form and it can be topped with almost anything. </li>
+		</condition>
+		<think>
+			<set name="state">NULL</set>
+		</think>
+		</template>
+	</category>
+
+
+
+
+
+
+	<!-- ingredient lookup list - both for full sentence lookups and single words -->
+	<category>
+			<pattern> WHAT IS SALT </pattern>
+			<template>
+			<random>
+			<li> Salt is a common mineral - common salt is comprised of an atom of sodium (Na) and an atom of chlorine (Cl).</li>
+			<li> Salt is an essential nutrient for human life. However, excess consumption of salt has been linked to hypertension and heart disease - be careful how much you use! </li>
+			</random> 
+		</template>
+		</category>
+	<category>
+			<pattern> WHAT IS BEEF </pattern>
+			<template>
+			<random>
+		<li>Steak (in Sam's case) comes from the cow. Steaks are rated on their doneness on a scale in between rare and well done. This refers to the internal temperature and therefore the amount that the meat has been cooked.</li>
+		<li> Steak is categorized into different cuts based on where on the body these cuts come from. Rougher cuts that are harder to eat/cook are ofter cheaper than more flavorful and softer cuts. </li>
+				</random>
+			</template>
+		</category>
+	<category>
+		<pattern> WHAT IS STEAK </pattern>
+		<template> <random>
+		<li>Steak (in Sam's case) comes from the cow. Steaks are rated on their doneness on a scale in between rare and well done. This refers to the internal temperature and therefore the amount that the meat has been cooked.</li>
+		<li> Steak is categorized into different cuts based on where on the body these cuts come from. Rougher cuts that are harder to eat/cook are ofter cheaper than more flavorful and softer cuts. </li>
+				</random>
+		</template>
+	</category>
+	<category>
+			<pattern> WHAT IS COCOA </pattern>
+			<template> 
+				<random>
+				<li>Cocoa is the dried and crushed seed of cacao. It is responsible for the chocolately flavor in foods.</li>
+				<li>Cocoa comes from the Cacao tree. This tree is native to the Amazon basin but over 70% of the world cocoa supply is grown in North Africa now. </li>
+				</random> 
+			</template>
+		</category>
+	<category>
+			<pattern> WHAT IS FLOUR </pattern>
+			<template> 
+				<random>
+					<li> Flour is a powder made by grinding raw grains. </li>
+					<li> Flour is a powder of a grain. It has been synthesized by humans for millenia and has made up much of western diets since then. </li>
+				</random>
+			</template>
+		</category>
+	<category>
+			<pattern> WHAT ARE EGGS </pattern>
+			<template> For these recipes, I am referring to chicken eggs. People eat eggs that have not been fertilized and which therefore do not have baby chickens in them.
+			</template>
+		</category>
+		<category>
+			<pattern> WHAT IS CHICKEN </pattern>
+			<template> Chicken is a domesticated bird that is used across the world for food.
+			</template>
+		</category>
+		<category>
+			<pattern> WHAT IS MILK </pattern>
+			<template> Milk is a white liquid coming from the mammary glands of a cow </template>
+		</category>
+		<category>
+			<pattern> WHAT IS SUGAR </pattern>
+			<template> Sugar is a molecule used to sweeten food. </template>
+		</category>
+		<category>
+			<pattern> WHAT IS PEPPER </pattern>
+			<template> Pepper is a dried vine that is crushed and added to food.</template>
+		</category>
+	<category>
+			<pattern> WHAT IS * </pattern>
+			<template> <srai> WHAT IS <star/> </srai> </template>
+		</category>
+		<category>
+			<pattern> SALT </pattern>
+			<template>
+			<random>
+			<li> Salt is a common mineral - common salt is comprised of an atom of sodium (Na) and an atom of chlorine (Cl).</li>
+			<li> Salt is an essential nutrient for human life. However, excess consumption of salt has been linked to hypertension and heart disease - be careful how much you use! </li>
+			</random> 
+		</template>
+		</category>
+	<category>
+			<pattern> BEEF </pattern>
+			<template> 
+				<random>
+					<li>Steak (in Sam's case) comes from the cow. Steaks are rated on their doneness on a scale in between rare and well done. This refers to the internal temperature and therefore the amount that the meat has been cooked.</li>
+					<li> Steak is categorized into different cuts based on where on the body these cuts come from. Rougher cuts that are harder to eat/cook are ofter cheaper than more flavorful and softer cuts. </li>
+				</random>
+
+			</template>
+		</category>
+	<category>
+			<pattern> COCOA </pattern>
+			<template> 
+				<random>
+				<li>Cocoa is the dried and crushed seed of cacao. It is responsible for the chocolately flavor in foods.</li>
+				<li>Cocoa comes from the Cacao tree. This tree is native to the Amazon basin but over 70% of the world cocoa supply is grown in North Africa now. </li>
+				</random> 
+			</template>
+		</category>
+	<category>
+			<pattern> FLOUR </pattern>
+			<template> 
+				<random>
+					<li> Flour is a powder made by grinding raw grains. </li>
+					<li> Flour is a powder of a grain. It has been synthesized by humans for millenia and has made up much of western diets since then. </li>
+				</random>
+			</template>
+		</category>
+	<category>
+			<pattern> EGGS </pattern>
+			<template> For these recipes, I am referring to chicken eggs. People eat eggs that have not been fertilized and which therefore do not have baby chickens in them.
+			</template>
+		</category>
+		<category>
+			<pattern> CHICKEN </pattern>
+			<template> Chicken is a domesticated bird that is used across the world for food.
+			</template>
+		</category>
+		<category>
+			<pattern> MILK </pattern>
+			<template> Milk is a white liquid coming from the mammary glands of a cow </template>
+		</category>
+		<category>
+			<pattern> SUGAR </pattern>
+			<template> Sugar is a molecule used to sweeten food. </template>
+		</category>
+		<category>
+			<pattern> PEPPER </pattern>
+			<template> Pepper is a dried vine that is crushed and added to food.</template>
+		</category>
+</aiml>

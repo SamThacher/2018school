@@ -1,0 +1,180 @@
+<?xml version= "1.0" encoding="UTF-8" ?>
+
+<grammar xml:lang="en-US">
+
+ 
+
+<!-- create the top level rule -->
+
+<!-- this grammar will fill both subgrammars and put each result into a fancy variable -->
+
+<!-- be sure to declare this as public so we can read it in the vxml script -->
+
+<rule id="ORDER" scope="public">
+
+ 
+
+  <!-- match one of the <item>s between the <one-of> elements -->
+
+  <one-of>
+
+   <item>
+
+ 
+
+    <!-- both grammars were matched mixed-init style -->
+
+    <item><ruleref uri="#SIZE" /><tag>out.size=rules.SIZE.size;</tag></item>
+
+    <item><ruleref uri="#TOPPING" /><tag>out.topping=rules.TOPPING.topping</tag></item>
+
+    <item><ruleref uri="#DRINK" /><tag>out.drink=rules.DRINK.drink</tag></item>
+
+
+   </item>
+
+   <item>
+    <!-- matched celeb only -->
+
+    <ruleref uri="#SIZE" />
+
+   </item>
+
+   <item>
+
+ 
+
+    <!-- matched location only -->
+
+    <ruleref uri="#TOPPING" />
+
+   </item>
+
+  </one-of>
+
+</rule>
+
+ 
+
+<!-- Celebrity grammar -->
+
+<!-- we can use this by itself or mixed-init style -->
+
+<rule id="SIZE" scope="public">
+
+  <one-of>
+
+   <item>
+
+ 
+
+    <!-- optional utterance prefixes go here -->
+
+    <!-- Load the celebrity filler subgrammar -->
+
+
+ 
+
+    <!-- choose one of these celebrities -->
+
+    <!-- return the info we need in out.celebrity -->
+
+    <one-of>
+
+     <item> small <tag> out.size = "small"; </tag></item>
+
+     <item> medium <tag> out.size = "medium";  </tag></item>
+
+     <item> large <tag> out.size = "large"; </tag></item>
+
+    </one-of>
+
+   </item>
+
+  </one-of>
+
+</rule>
+
+ 
+
+<!-- the location grammar -->
+
+<!-- same as celebrity grammar, just different info to match -->
+
+<rule id="TOPPING" scope="public">
+
+  <one-of>
+
+   <item>
+
+ 
+
+    <!-- optional utterance prefixes go here -->
+
+    <one-of>
+
+     <item> spinach <tag> out.topping = "spinach";   </tag></item>
+
+     <item> bell peppers <tag> out.topping = "bell peppers";   </tag></item>
+
+     <item> pepperoni <tag> out.topping = "pepperoni";   </tag></item>
+
+     <item> sausage <tag> out.topping = "sausage";   </tag></item>
+
+    </one-of>
+
+   </item>
+
+  </one-of>
+
+</rule>
+
+ 
+
+<!-- filler grammar to prefix 'celeb' utterance' -->
+
+<rule id="FILL_CELEB" scope="public">
+
+  <one-of>
+
+   <item> i saw </item>
+
+   <item> could swear it was </item>
+
+   <item> it was </item>
+
+   <item> holy moly </item>
+
+  </one-of>
+
+</rule>
+
+ 
+
+<!-- filler grammar to prefix 'location' utterance' -->
+
+<rule id="FILL_LOC" scope="public">
+
+  <one-of>
+
+   <item> in the </item>
+
+   <item> at the </item>
+
+   <item> was at the </item>
+
+   <item> ditty bopping at </item>
+
+   <item> big as life near the </item>
+
+   <item> looking fatter in person at </item>
+
+   <item> hanging out at </item>
+
+   <item> eating like a pig at </item>
+
+  </one-of>
+
+</rule>
+
+</grammar>

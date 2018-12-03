@@ -45,24 +45,27 @@ public class Examples extends java.util.ArrayList<Example>
 
 	public java.lang.String toString()
 	{
-		java.lang.String s = "";
-		s += "@examples\n";
+		StringBuilder s = new StringBuilder();
+		if(this.size() > 0)
+		{
+			s.append("@examples\n");
+		}
 		for(int j = 0; j < this.size(); j++)
 		{
 			for(int i = 0; i < attributes.size(); i++)
 			{
 				if(attributes.get(i) instanceof NumericAttribute)
 				{
-					s += Double.toString(this.get(j).get(i)) + " ";
+					s.append(Double.toString(this.get(j).get(i)) + " ");
 				}
 				else
 				{
-					s += ((NominalAttribute)attributes.get(i)).getValue(this.get(j).get(i).intValue()) + " ";
+					s.append(((NominalAttribute)attributes.get(i)).getValue(this.get(j).get(i).intValue()) + " ");
 				}
 			}
-			s += "\n";
+			s.append("\n");
 		}
-		return s;
+		return s.toString();
 	}
 	
 }

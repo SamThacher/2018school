@@ -9,10 +9,15 @@ public class Attributes
 	public Attributes()
 	{
 		attributes = new java.util.ArrayList<Attribute>();
+		hasNumericAttributes = false;
 	}
 
 	public void add(Attribute attribute)
 	{
+		if(!hasNumericAttributes && attribute instanceof NumericAttribute)
+		{
+			hasNumericAttributes = true;
+		}
 		attributes.add(attribute);
 	}
 
@@ -23,14 +28,7 @@ public class Attributes
 	
 	public boolean getHasNumericAttributes()
 	{
-		for(int i = 0; i < attributes.size(); i++)
-		{
-			if(attributes.get(i) instanceof NumericAttribute)
-			{
-				return true;
-			}
-		}
-		return false;
+		return hasNumericAttributes;
 	}
 
 	public Attribute get(int i)
@@ -87,25 +85,16 @@ public class Attributes
 
 	public java.lang.String toString()
 	{
-		java.lang.String s = "";
+		StringBuilder s = new StringBuilder();
 		for(int i = 0; i < attributes.size(); i++)
 		{
-			s += attributes.get(i).toString() + "\n";
+			s.append(attributes.get(i).toString() + "\n");
 		}
-		return s;
+		return s.toString();
 	}
 
 	public static void main(java.lang.String[] args)
 	{
-		try 
-		{
-			Attributes a = new Attributes();
-			java.nio.file.Path filePath = java.nio.file.Paths.get("bikes.mff");
-			java.util.Scanner sc = new java.util.Scanner(filePath);
-			a.parse(sc);
-		}
-		catch(java.lang.Exception e) {
-  			e.printStackTrace();
-		}
+		
 	}
 }

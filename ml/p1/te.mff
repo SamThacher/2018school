@@ -1,0 +1,12 @@
+@dataset 2file
+
+@attribute a1 x y z
+@attribute a2 x y z
+@attribute a3 x y z
+@attribute classAtt is isnt
+
+@examples
+
+x x x is
+y y y isnt
+z z z isnt

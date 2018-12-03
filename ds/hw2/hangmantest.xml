@@ -1,0 +1,28 @@
+<aiml version="1.0.1" encoding="UTF-8">
+<!-- basic_chat.aiml -->
+
+    <category>
+        <pattern>A</pattern>
+        <template>
+            A
+        </template>
+    </category>
+    
+    <category>
+        <pattern>_ A</pattern>
+        <template>
+            A
+        </template>
+    </category>
+
+    <category>
+        <pattern>A _</pattern>
+        <template>
+            A
+        </template>
+    </category>
+    
+
+
+    
+</aiml>

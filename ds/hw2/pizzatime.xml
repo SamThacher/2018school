@@ -6,6 +6,8 @@
 
   <field name = "size">
 
+    <!-- This is the simple one-directional pizza ordering system -->
+
 
    <prompt>
 
@@ -61,6 +63,7 @@
 	<filled>
 		<if cond="confirm=='no'">
 			<prompt> Ok. Please call back the system to restart. </prompt>
+
 		<elseif cond="confirm=='yes'"/>
 			<prompt> Great. your order will be delivered shortly </prompt>
 		</if>

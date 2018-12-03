@@ -1,0 +1,44 @@
+<form>
+<grammar type="application/x-nuance-gsl">
+<![CDATA[
+Request
+(
+?[ (i'd like) (tell me) ]
+Service
+?and ?Service
+?and ?Service
+?please
+)
+Service
+(
+?the
+[
+news { <news true> }
+weather { <weather true> }
+sports { <sports true> }
+]
+)
+]]>
+</grammar>
+37
+<initial>
+<prompt>
+What service would you like?
+</prompt>
+</initial>
+<field name="news" type="boolean">
+</field>
+<field name="weather" type="boolean">
+</field>
+<field name="sports" type="boolean">
+</field>
+<filled>
+<prompt> You chose the </prompt>
+<if cond="news"> <prompt> news </prompt> </if>
+<if cond="weather"> <prompt> weather </prompt> </if>
+<if cond="sports"> <prompt> sports </prompt> </if>
+<prompt> service. </prompt>
+<clear/>
+</filled>
+</form>
+</vxml>

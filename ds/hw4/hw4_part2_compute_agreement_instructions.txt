@@ -1,0 +1,1 @@
+Instructions for the script: All you have to do is run the script with python while having xlrd and sklearn installed (use pip to install if you don't have them already). In order to indicate the files you will be comparing, you edit the filepaths on lines 75 and 76. And the program is run in the exact same way as any other python 3 program - just 'python3 filename'.

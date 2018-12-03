@@ -22,7 +22,7 @@ public class TrainTestSets implements OptionHandler
 	public TrainTestSets( DataSet train, DataSet test )
 	{
 		this.train = train;
-		this.test = this.test;
+		this.test = test;
 	}
 	public DataSet getTrainingSet()
 	{
@@ -42,31 +42,21 @@ public class TrainTestSets implements OptionHandler
 	}
 	public void setOptions( java.lang.String[] options ) throws Exception
 	{
-		if(options[0].contains("-t") )
+		for(int i = 0; i < options.length; i++)
 		{
-			try
+			if(options[i].contains("-t"))
 			{
-				java.lang.String fil = options[1];
-				train.load(fil);
-
-				// Attributes a = new Attributes();
-				// java.nio.file.Path filePath = java.nio.file.Paths.get(fil);
-				// java.util.Scanner sc = new java.util.Scanner(filePath);
-				// a.parse(sc);
-				// Examples e = new Examples(a);
-				// e.parse(sc);
+				train.load(options[i+1]);
 			}
-			catch(java.lang.ArrayIndexOutOfBoundsException e) {
-				System.out.println("Training file is required");
-			}
-			catch(java.lang.Exception e) 
+			else if(options[i].contains("-T"))
 			{
-				e.printStackTrace();
+				test.load(options[i+1]);
 			}
 		}
+
 	}
 	public java.lang.String toString()
 	{
-		return train.toString();
+		return train.toString() + "\n\n" + test.toString();
 	}
 }
