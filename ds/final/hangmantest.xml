@@ -2,6 +2,34 @@
 <!-- basic_chat.aiml -->
 
     <category>
+        <pattern>*</pattern>
+        <template>
+            <star/>
+        </template>
+    </category>
+
+    <category>
+        <pattern>1</pattern>
+        <template>
+            1
+        </template>
+    </category>
+
+    <category>
+        <pattern>_ 1</pattern>
+        <template>
+            1
+        </template>
+    </category>
+
+    <category>
+        <pattern>1 _</pattern>
+        <template>
+            1
+        </template>
+    </category>
+
+    <category>
         <pattern>A</pattern>
         <template>
             A
@@ -21,6 +49,532 @@
             A
         </template>
     </category>
+
+    <category>
+        <pattern>B</pattern>
+        <template>
+            B
+        </template>
+    </category>
+    
+    <category>
+        <pattern>_ B</pattern>
+        <template>
+            B
+        </template>
+    </category>
+
+    <category>
+        <pattern>B _</pattern>
+        <template>
+            B
+        </template>
+    </category>
+
+    <category>
+        <pattern>C</pattern>
+        <template>
+            C
+        </template>
+    </category>
+    
+    <category>
+        <pattern>_ C</pattern>
+        <template>
+            C
+        </template>
+    </category>
+
+    <category>
+        <pattern>C _</pattern>
+        <template>
+            C
+        </template>
+    </category>
+
+    <category>
+        <pattern>D</pattern>
+        <template>
+            D
+        </template>
+    </category>
+    
+    <category>
+        <pattern>_ D</pattern>
+        <template>
+            D
+        </template>
+    </category>
+
+    <category>
+        <pattern>D _</pattern>
+        <template>
+            D
+        </template>
+    </category>
+
+    <category>
+        <pattern>E</pattern>
+        <template>
+            E
+        </template>
+    </category>
+    
+    <category>
+        <pattern>_ E</pattern>
+        <template>
+            E
+        </template>
+    </category>
+
+    <category>
+        <pattern>E _</pattern>
+        <template>
+            E
+        </template>
+    </category>
+
+    <category>
+        <pattern>F</pattern>
+        <template>
+            F
+        </template>
+    </category>
+    
+    <category>
+        <pattern>_ F</pattern>
+        <template>
+            F
+        </template>
+    </category>
+
+    <category>
+        <pattern>F _</pattern>
+        <template>
+            F
+        </template>
+    </category>
+
+    <category>
+        <pattern>G</pattern>
+        <template>
+            G
+        </template>
+    </category>
+    
+    <category>
+        <pattern>_ G</pattern>
+        <template>
+            G
+        </template>
+    </category>
+
+    <category>
+        <pattern>G _</pattern>
+        <template>
+            G
+        </template>
+    </category>
+
+    <category>
+        <pattern>H</pattern>
+        <template>
+            H
+        </template>
+    </category>
+    
+    <category>
+        <pattern>_ H</pattern>
+        <template>
+            H
+        </template>
+    </category>
+
+    <category>
+        <pattern>H _</pattern>
+        <template>
+            H
+        </template>
+    </category>
+
+    <category>
+        <pattern>I</pattern>
+        <template>
+            I
+        </template>
+    </category>
+    
+    <category>
+        <pattern>_ I</pattern>
+        <template>
+            I
+        </template>
+    </category>
+
+    <category>
+        <pattern>I _</pattern>
+        <template>
+            I
+        </template>
+    </category>
+
+    <category>
+        <pattern>J</pattern>
+        <template>
+            J
+        </template>
+    </category>
+    
+    <category>
+        <pattern>_ J</pattern>
+        <template>
+            J
+        </template>
+    </category>
+
+    <category>
+        <pattern>J _</pattern>
+        <template>
+            J
+        </template>
+    </category>
+
+    <category>
+        <pattern>K</pattern>
+        <template>
+            K
+        </template>
+    </category>
+    
+    <category>
+        <pattern>_ K</pattern>
+        <template>
+            K
+        </template>
+    </category>
+
+    <category>
+        <pattern>K _</pattern>
+        <template>
+            K
+        </template>
+    </category>
+
+    <category>
+        <pattern>L</pattern>
+        <template>
+            L
+        </template>
+    </category>
+    
+    <category>
+        <pattern>_ L</pattern>
+        <template>
+            L
+        </template>
+    </category>
+
+    <category>
+        <pattern>L _</pattern>
+        <template>
+            L
+        </template>
+    </category>
+
+    <category>
+        <pattern>M</pattern>
+        <template>
+            M
+        </template>
+    </category>
+    
+    <category>
+        <pattern>_ M</pattern>
+        <template>
+            M
+        </template>
+    </category>
+
+    <category>
+        <pattern>M _</pattern>
+        <template>
+            M
+        </template>
+    </category>
+
+    <category>
+        <pattern>N</pattern>
+        <template>
+            N
+        </template>
+    </category>
+    
+    <category>
+        <pattern>_ N</pattern>
+        <template>
+            N
+        </template>
+    </category>
+
+    <category>
+        <pattern>N _</pattern>
+        <template>
+            N
+        </template>
+    </category>
+
+    <category>
+        <pattern>O</pattern>
+        <template>
+            O
+        </template>
+    </category>
+    
+    <category>
+        <pattern>_ O</pattern>
+        <template>
+            O
+        </template>
+    </category>
+
+    <category>
+        <pattern>O _</pattern>
+        <template>
+            O
+        </template>
+    </category>
+
+    <category>
+        <pattern>P</pattern>
+        <template>
+            P
+        </template>
+    </category>
+    
+    <category>
+        <pattern>_ P</pattern>
+        <template>
+            P
+        </template>
+    </category>
+
+    <category>
+        <pattern>P _</pattern>
+        <template>
+            P
+        </template>
+    </category>
+
+    <category>
+        <pattern>Q</pattern>
+        <template>
+            Q
+        </template>
+    </category>
+    
+    <category>
+        <pattern>_ Q</pattern>
+        <template>
+            Q
+        </template>
+    </category>
+
+    <category>
+        <pattern>Q _</pattern>
+        <template>
+            Q
+        </template>
+    </category>
+
+    <category>
+        <pattern>R</pattern>
+        <template>
+            R
+        </template>
+    </category>
+    
+    <category>
+        <pattern>_ R</pattern>
+        <template>
+            R
+        </template>
+    </category>
+
+    <category>
+        <pattern>R _</pattern>
+        <template>
+            R
+        </template>
+    </category>
+
+    <category>
+        <pattern>S</pattern>
+        <template>
+            S
+        </template>
+    </category>
+    
+    <category>
+        <pattern>_ S</pattern>
+        <template>
+            S
+        </template>
+    </category>
+
+    <category>
+        <pattern>S _</pattern>
+        <template>
+            S
+        </template>
+    </category>
+
+    <category>
+        <pattern>T</pattern>
+        <template>
+            T
+        </template>
+    </category>
+    
+    <category>
+        <pattern>_ T</pattern>
+        <template>
+            T
+        </template>
+    </category>
+
+    <category>
+        <pattern>T _</pattern>
+        <template>
+            T
+        </template>
+    </category>
+
+    <category>
+        <pattern>U</pattern>
+        <template>
+            U
+        </template>
+    </category>
+    
+    <category>
+        <pattern>_ U</pattern>
+        <template>
+            U
+        </template>
+    </category>
+
+    <category>
+        <pattern>U _</pattern>
+        <template>
+            U
+        </template>
+    </category>
+
+    <category>
+        <pattern>V</pattern>
+        <template>
+            V
+        </template>
+    </category>
+    
+    <category>
+        <pattern>_ V</pattern>
+        <template>
+            V
+        </template>
+    </category>
+
+    <category>
+        <pattern>V _</pattern>
+        <template>
+            V
+        </template>
+    </category>
+    
+    <category>
+        <pattern>W</pattern>
+        <template>
+            W
+        </template>
+    </category>
+    
+    <category>
+        <pattern>_ W</pattern>
+        <template>
+            W
+        </template>
+    </category>
+
+    <category>
+        <pattern>W _</pattern>
+        <template>
+            W
+        </template>
+    </category>
+    
+    <category>
+        <pattern>X</pattern>
+        <template>
+            X
+        </template>
+    </category>
+    
+    <category>
+        <pattern>_ X</pattern>
+        <template>
+            X
+        </template>
+    </category>
+
+    <category>
+        <pattern>X _</pattern>
+        <template>
+            X
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Y</pattern>
+        <template>
+            Y
+        </template>
+    </category>
+    
+    <category>
+        <pattern>_ Y</pattern>
+        <template>
+            Y
+        </template>
+    </category>
+
+    <category>
+        <pattern>Y _</pattern>
+        <template>
+            Y
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Z</pattern>
+        <template>
+            Z
+        </template>
+    </category>
+    
+    <category>
+        <pattern>_ Z</pattern>
+        <template>
+            Z
+        </template>
+    </category>
+
+    <category>
+        <pattern>Z _</pattern>
+        <template>
+            Z
+        </template>
+    </category>
+    
     
 
 

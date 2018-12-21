@@ -1,0 +1,197 @@
+< require 'wit'
+< 
+399,400c397
+<       action, val = use_wit(action)
+<       determine_action(@other_player, action, val, "check/bet")
+---
+>       determine_action(@other_player, action, "check/bet")
+405,406c402
+<       action, val = use_wit(action)
+<       determine_action(@other_player, action, val, "check/bet")     
+---
+>       determine_action(@other_player, action, "check/bet")     
+411,424c407
+<       action, val = use_wit(action)
+<       determine_action(@other_player, action, val, "check/bet")
+<     end
+<   end
+< 
+<   def use_wit(msg)
+<     client = Wit.new(access_token: 'ZODQGWIEJ7SPIJMP2CUEG7FWLHEVYRS7')
+<     package = client.message(msg)
+<     action = package['entities']['intent'][0]["value"][0]
+<     value = 0
+<     begin
+<       value = package['entities']['number'][0]["value"]
+<     rescue
+<       value = -1
+---
+>       determine_action(@other_player, action, "check/bet")
+426,439d408
+<     return action, value
+<   end
+< 
+<   def use_wit_num(msg)
+<     client = Wit.new(access_token: 'ZODQGWIEJ7SPIJMP2CUEG7FWLHEVYRS7')
+<     package = client.message(msg)
+<     value = 0
+<     begin
+<       value = package['entities']['number'][0]["value"]
+<     rescue
+<       value = -1
+<     end
+<     puts(value)
+<     return value
+442c411
+<   def determine_action(player, action, val, type)
+---
+>   def determine_action(player, action, type)
+448c417
+<           bet(@other_player, val)
+---
+>           bet(@other_player)
+458c427
+<           raze(@other_player, val)
+---
+>           raze(@other_player)
+470c439
+<           bet(@button_player, val)
+---
+>           bet(@button_player)
+480c449
+<           raze(@button_player, val)
+---
+>           raze(@button_player)
+503c472
+<     puts "#{@other_player.name}, you are out of position and first to act. You have #{@other_player.chips} chips. The pot is #{@pot}. #{@bp_bet - @op_bet} chips to call. What do you want to do? (c, f, r, or a)"
+---
+>     puts "#{@other_player.name}, you are out of position and first to act. You have #{@other_player.chips} chips. The pot is #{@pot}. #{@bp_bet - @op_bet} chips to call. Type c, f, r, or a"
+505,506c474
+<     action, val = use_wit(action)
+<     determine_action(@other_player, action, val,"call/raise")
+---
+>     determine_action(@other_player, action, "call/raise")
+644c612
+<       puts "#{@button_player.name}, #{@other_player.name} checked. The pot is #{@pot}. You have #{@button_player.chips} chips left. What would you like to do? (c, b, a)"
+---
+>       puts "#{@button_player.name}, #{@other_player.name} checked. The pot is #{@pot}. You have #{@button_player.chips} chips left. What would you like to do? Type c, b, a"
+646,647c614
+<       action, val = use_wit(action)
+<       determine_action(@button_player, action, val, "check/bet")
+---
+>       determine_action(@button_player, action, "check/bet")
+683c650
+<           puts "#{@button_player.name}, #{@other_player.name} limped in. You are on the button. What would you like to do? ( c, r, a)"
+---
+>           puts "#{@button_player.name}, #{@other_player.name} limped in. You are on the button. What would you like to do? Type c, r, a"
+685,686c652
+<           action, val = use_wit(action)
+<           determine_action(@button_player, action, val, "call/raise")
+---
+>           determine_action(@button_player, action, "call/raise")
+716c682
+<   def bet(player, val)
+---
+>   def bet(player)
+719d684
+<       first_loop = true
+721,729c686,687
+<         bet_amount = 0
+<         if val != -1 and first_loop
+<           first_loop = false
+<           bet_amount = val
+<         else
+<           puts "#{@other_player.name}, the pot is #{@pot}. How much would you like to bet?"
+<           bet_amount = gets.chomp
+<           bet_amount = use_wit_num(bet_amount)
+<         end
+---
+>         puts "#{@other_player.name}, the pot is #{@pot}. How much would you like to bet?"
+>         bet_amount = gets.chomp.to_i
+738d695
+<           action, val = use_wit(action)
+759c716
+<           puts "#{@button_player.name}, #{@other_player.name} has bet #{@op_bet} into a #{pot_before} chip pot. The pot is now #{@pot}. #{@op_bet - @bp_bet} chips to call. What do you want to do? ( f, c, r, or a)"
+---
+>           puts "#{@button_player.name}, #{@other_player.name} has bet #{@op_bet} into a #{pot_before} chip pot. The pot is now #{@pot}. #{@op_bet - @bp_bet} chips to call. Type f, c, r, or a"
+761,762c718
+<           action, val = use_wit(action)
+<           determine_action(@button_player, action, val, "call/raise") 
+---
+>           determine_action(@button_player, action, "call/raise") 
+767d722
+<       first_loop = true
+769,777c724,725
+<         bet_amount = 0
+<         if val != -1 and first_loop
+<           first_loop = false
+<           bet_amount = val
+<         else
+<           puts "#{@other_player.name}, the pot is #{@pot}. How much would you like to bet?"
+<           bet_amount = gets.chomp
+<           bet_amount = use_wit_num(bet_amount)
+<         end
+---
+>         puts "#{@button_player.name}, the pot is #{@pot}. How much would you like to bet?"
+>         bet_amount = gets.chomp.to_i
+806c754
+<           puts "#{@other_player.name}, #{@button_player.name} has bet #{@bp_bet} into a #{pot_before} chip pot. The pot is now #{@pot}. #{@bp_bet - @op_bet} chips to call. What do you want to do? (f, c, r, or a)"
+---
+>           puts "#{@other_player.name}, #{@button_player.name} has bet #{@bp_bet} into a #{pot_before} chip pot. The pot is now #{@pot}. #{@bp_bet - @op_bet} chips to call. Type f, c, r, or a"
+808,809c756
+<           action, val = use_wit(action)
+<           determine_action(@other_player, action, val, "call/raise")
+---
+>           determine_action(@other_player, action, "call/raise")
+815c762
+<   def raze(player, val)
+---
+>   def raze(player)
+818d764
+<       first_loop = true
+820,828c766,767
+<         raise_amount = 0
+<         if val != -1 and first_loop
+<           first_loop = false
+<           raise_amount = val
+<         else
+<           puts "You want to raise the current bet of #{@bp_bet}. How much do you want to raise your bet to?"
+<           raise_amount = gets.chomp
+<           raise_amount = use_wit_num(raise_amount)
+<         end
+---
+>         puts "You want to raise the current bet of #{@bp_bet}. How much do you want to raise your bet to?"
+>         raise_amount = gets.chomp.to_i
+859c798
+<           puts "#{@button_player.name}, #{@other_player.name} has raised the bet to #{@op_bet}. The pot is now #{@pot}. #{@op_bet - @bp_bet} chips to call. What do you want to do? ( f, c, r, or a)"
+---
+>           puts "#{@button_player.name}, #{@other_player.name} has raised the bet to #{@op_bet}. The pot is now #{@pot}. #{@op_bet - @bp_bet} chips to call. Type f, c, r, or a"
+861,862c800
+<           action, val = use_wit(action)
+<           determine_action(@button_player, action, val, "call/raise") 
+---
+>           determine_action(@button_player, action, "call/raise") 
+868d805
+<       first_loop = true
+870,878c807,808
+<         raise_amount = 0
+<         if val != -1 and first_loop
+<           first_loop = false
+<           raise_amount = val
+<         else
+<           puts "You want to raise the current bet of #{@bp_bet}. How much do you want to raise your bet to?"
+<           raise_amount = gets.chomp
+<           raise_amount = use_wit_num(raise_amount)
+<         end
+---
+>         puts "You want to raise the current bet of #{@op_bet}. How much do you want to raise your bet to?"
+>         raise_amount = gets.chomp.to_i
+909c839
+<           puts "#{@other_player.name}, #{@button_player.name} has raised the bet to #{@bp_bet}. The pot is now #{@pot}. #{@bp_bet - @op_bet} chips to call. What do you want to do? (f, c, r, or a)"
+---
+>           puts "#{@other_player.name}, #{@button_player.name} has raised the bet to #{@bp_bet}. The pot is now #{@pot}. #{@bp_bet - @op_bet} chips to call. Type f, c, r, or a"
+911,912c841
+<           action, val = use_wit(action)
+<           determine_action(@other_player, action, val, "call/raise") 
+---
+>           determine_action(@other_player, action, "call/raise") 

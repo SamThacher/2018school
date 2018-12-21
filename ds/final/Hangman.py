@@ -5,8 +5,13 @@
 #################################################
 import time
 import random
+import aiml
+kernel = aiml.Kernel()
+kernel.learn("hangmantest.xml")
 easy = ['PHONE','HAPPY','APPLE','EARTH','GONGYIWEI']
 normal = ['PYTHON','PIONEER','SINGAPORE','FATHER','MOTHER','GONGYIWEI']
+
+access_token = "ZODQGWIEJ7SPIJMP2CUEG7FWLHEVYRS7"
 #################################################
 #clear          : This function will clear the whole screen with 30 blank lines
 #
@@ -193,7 +198,9 @@ def gameInterface(guess,miss_attempts,misses,hintleft):
             print('# You have ',left,' attempt(s) left')
             print('# You have ',hintleft,' hint(s) left')
             print('# input ? to get hint, # to restart and ! to see answer')
-            _in = input('# Guess: ')
+
+            # print('# Guess: ')
+            _in = kernel.respond(input('# Guess: '))
             if len(_in)>1:
                 return '<'
             else: 

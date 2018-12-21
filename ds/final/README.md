@@ -1,45 +1,19 @@
-Hangman
-=======
-©Copyright 2013 Ciel
 
-Command line interface, Hangman game in Python.
+Here are the 2 games I used:
 
-```
- __    __       ___      .__   __.   _______ .___  ___.      ___      .__   __.
-|  |  |  |     /   \     |  \ |  |  /  _____||   \/   |     /   \     |  \ |  |
-|  |__|  |    /  ^  \    |   \|  | |  |  __  |  \  /  |    /  ^  \    |   \|  |
-|   __   |   /  /_\  \   |  . `  | |  | |_ | |  |\/|  |   /  /_\  \   |  . `  |
-|  |  |  |  /  _____  \  |  |\   | |  |__| | |  |  |  |  /  _____  \  |  |\   |
-|__|  |__| /__/     \__\ |__| \__|  \______| |__|  |__| /__/     \__\ |__| \__|
-#######################################################
-#    key in admin to get in admin model!              #
-#    key in whosyourdaddy to get in special model!    #
-#    Warnning! admin mode ONLY for developers!        #
-#    any bugs please report to                        #
-#              http://github.com/imwithye             #
-#    email: imwithye@gmail.com                        #
-#    All rights reserved!                             #
-#######################################################
-```
+https://github.com/imwithye/Hangman-in-Python
 
-###Setup
-1. Git or download this program.
-2. Run this program in Python3. Using ``python3 Hangman.py``
+https://repl.it/@samaugust/Ruby-IRB-Poker-Game
 
-###Hints
-```
-####################
-#                  #
-#      Hangman     #
-#                  #
-####################
-       1.Start     #
-       2.Copyright #
-       3.Exit      #
-Input Selection: 
-```
-1. You may type in admin to edit the words' library.
-2. You can also type in "whosyourdaddy" to enter special mode.
 
----
-©Copyright 2013 Ciel, Nanyang Technological University, bugs please report to imwithye@gmail.com
+Hangman: The only package you need to run this game locally is aiml. So here are the steps to run:
+pip install aiml
+python3 hangman.py
+
+That should be it.
+
+For Ruby poker: This game requires the user to have ruby and the default packages that come along with it. Then you just have to install wit using the gem installer. steps:
+gem install wit
+ruby pokerreplit.rb
+
+I have attached text files of the diffs so you can see what I changed as well. 

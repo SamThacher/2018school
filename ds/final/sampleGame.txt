@@ -1,0 +1,147 @@
+.
+.
+Welcome to Sam Hickey's Poker Madness!
+
+Let's begin!
+
+What is player 1's name?
+Sam
+
+And, what is player 2's name?
+Will
+
+Dealing new hand...
+Wait a moment....
+
+
+
+
+ ______ ______
+|♦    ||♣    |
+|  4  ||  K  |
+|____♦||____♣|
+^Pocket cards^
+
+Sam, you are out of position and first to act. You have 995 chips. The pot is 15. 5 chips to call. Type c, f, r, or a
+I am raising
+rYou want to raise the current bet of 10. How much do you want to raise your bet to?
+60
+
+
+ ______ ______
+|♦    ||♣    |
+|  5  ||  Q  |
+|____♦||____♣|
+^Pocket cards^
+
+Will, Sam has raised the bet to 60. The pot is now 70. 50 chips to call. Type f, c, r, or a
+I call
+c
+
+ ______ ______ ______
+|♥    ||♠    ||♥    |
+|  J  ||  K  ||  Q  |
+|____♥||____♠||____♥|
+ ^^Community cards^^
+ ______ ______
+|♦    ||♣    |
+|  4  ||  K  |
+|____♦||____♣|
+^Pocket cards^
+
+Sam, the pot is now 120. You have 940 chips left. Type b, c, or a
+I bet
+bSam, the pot is 120. How much would you like to bet?
+120
+
+
+ ______ ______ ______
+|♥    ||♠    ||♥    |
+|  J  ||  K  ||  Q  |
+|____♥||____♠||____♥|
+ ^^Community cards^^
+ ______ ______
+|♦    ||♣    |
+|  5  ||  Q  |
+|____♦||____♣|
+^Pocket cards^
+
+Will, Sam has bet 120 into a 120 chip pot. The pot is now 240. 120 chips to call. Type f, c, r, or a
+I guess I'll call
+c
+
+ ______ ______ ______ ______
+|♥    ||♠    ||♥    ||♣    |
+|  J  ||  K  ||  Q  ||  3  |
+|____♥||____♠||____♥||____♣|
+ ^^Community cards^^
+ ______ ______
+|♦    ||♣    |
+|  4  ||  K  |
+|____♦||____♣|
+^Pocket cards^
+
+Sam, the pot is now 360. You have 820 chips left. Type b, c, or a
+I check
+c
+
+ ______ ______ ______ ______
+|♥    ||♠    ||♥    ||♣    |
+|  J  ||  K  ||  Q  ||  3  |
+|____♥||____♠||____♥||____♣|
+ ^^Community cards^^
+ ______ ______
+|♦    ||♣    |
+|  5  ||  Q  |
+|____♦||____♣|
+^Pocket cards^
+
+Will, Sam checked. The pot is 360. You have 820 chips left. What would you like to do? Type c, b, a
+I check
+c
+
+ ______ ______ ______ ______ ______
+|♥    ||♠    ||♥    ||♣    ||♣    |
+|  J  ||  K  ||  Q  ||  3  ||  5  |
+|____♥||____♠||____♥||____♣||____♣|
+ ^^Community cards^^
+ ______ ______
+|♦    ||♣    |
+|  4  ||  K  |
+|____♦||____♣|
+^Pocket cards^
+
+Sam, the pot is now 360. You have 820 chips left. Type b, c, or a
+I bet
+bSam, the pot is 360. How much would you like to bet?
+200
+
+
+ ______ ______ ______ ______ ______
+|♥    ||♠    ||♥    ||♣    ||♣    |
+|  J  ||  K  ||  Q  ||  3  ||  5  |
+|____♥||____♠||____♥||____♣||____♣|
+ ^^Community cards^^
+ ______ ______
+|♦    ||♣    |
+|  5  ||  Q  |
+|____♦||____♣|
+^Pocket cards^
+
+Will, Sam has bet 200 into a 360 chip pot. The pot is now 560. 200 chips to call. Type f, c, r, or a
+I am all in
+a
+
+ ______ ______ ______ ______ ______
+|♥    ||♠    ||♥    ||♣    ||♣    |
+|  J  ||  K  ||  Q  ||  3  ||  5  |
+|____♥||____♠||____♥||____♣||____♣|
+ ^^Community cards^^
+ ______ ______
+|♦    ||♣    |
+|  4  ||  K  |
+|____♦||____♣|
+^Pocket cards^
+
+Sam, Will went all-in with their 820 remaining chips. You have 620 left. Calling will put you all in. Do you wish to call? Type y or n
+n
